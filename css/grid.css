@@ -1,0 +1,196 @@
+#main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+#hero-section {
+  background: white;
+  border-radius: 16px;
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero-content {
+  text-align: center;
+}
+
+#hero-content h1 {
+  font-size: 2.2rem;
+  color: #1a1a1a;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#lightbulb-image {
+  width: 200px;
+  height: 200px;
+  background: #f8f9fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#lightbulb {
+  width: 80px;
+  height: 120px;
+  background: linear-gradient(145deg, #fff 0%, #f0f0f0 100%);
+  border-radius: 40px 40px 15px 15px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#lightbulb::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 15px;
+  background: #666;
+  border-radius: 0 0 8px 8px;
+}
+
+#right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#grid-card {
+  flex: 1;
+}
+
+#grid-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+#grid-card :hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#grid-card -icon {
+  width: 48px;
+  height: 48px;
+  background: #6366f1;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#card-icon.chart::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 2px;
+}
+
+#card-icon.chart::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 2px;
+  right: 8px;
+  top: 6px;
+}
+
+#card-icon.team::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+  top: 8px;
+  left: 10px;
+}
+
+#card-icon.team::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+  top: 8px;
+  right: 10px;
+}
+
+#grid-card h3 {
+  font-size: 1.3rem;
+  color: #1a1a1a;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+#grid-card p {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #main-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  #hero-section {
+    padding: 40px 20px;
+  }
+
+  #hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  #lightbulb-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  #lightbulb {
+    width: 60px;
+    height: 90px;
+  }
+
+  #grid-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  #container {
+    padding: 20px 15px;
+  }
+
+  #hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  #grid-card {
+    padding: 20px;
+  }
+}

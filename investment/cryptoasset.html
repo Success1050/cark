@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="CarkInvest offers a universal crypto trading on stocks and cryptocurrency Market.
+We are the best stock & crypto trading platform with lowest fees operating since since 2014."
+    />
+    <meta
+      name="title"
+      content="CarkInvest | We Believe Innovation Is Key to Growth"
+    />
+    <meta
+      name="keywords"
+      content="forex brokers that trade cryptocurrency
+Crypto Forex trading platform
+Best crypto broker for beginners
+best bitcoin trading platform uk
+best bitcoin trading platform in south africa
+cryptocurrency trading platforms in usa
+crypto trading platform with lowest fees
+crypto platforms without identification
+CarkInvest crypto platform
+stock trading platforms for day trading
+Best place to buy stocks for beginners"
+    />
+    <meta name="author" content="CarkInvest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#FCB42D" />
+    <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon" />
+    <title>Cark Invest | We Believe Innovation Is Key to Growth</title>
+    <!-- critical preload -->
+    <link
+      rel="preload"
+      href="../js/vendors/bootstrap.bundle.min.js"
+      as="script"
+    />
+    <link rel="preload" href="../css/style.css" as="style" />
+    <!-- icon preload -->
+    <link
+      rel="preload"
+      href="../fonts/fa-brands-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="../fonts/fa-solid-900.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <!-- font preload -->
+    <link
+      rel="preload"
+      href="../fonts/dm-sans-v11-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="../fonts/dm-sans-v11-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/headerstyles.css" />
+    <link rel="stylesheet" href="../css/newstyle.css" />
+    <!-- <link rel="stylesheet" href="../css/navstyles.css" /> -->
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon" />
+    <!-- Touch icon -->
+    <link rel="apple-touch-icon-precomposed" href="../img/icon.png" />
+  </head>
+
+  <body>
+    <a
+      href="https://t.me/CathieWoodD"
+      target="_blank"
+      class="telegram-float-btn"
+      aria-label="Chat with us on Telegram"
+    >
+      <i class="fab fa-telegram-plane"></i>
+    </a>
+
+    <!-- Include Font Awesome CDN in your <head> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Add this CSS to your stylesheet or inside <style> tag -->
+    <style>
+      /* Style for the floating button */
+      .telegram-float-btn {
+        position: fixed;
+        bottom: 20px; /* distance from bottom */
+        left: 20px; /* distance from left */
+        background-color: #0088cc;
+        color: #fff;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        z-index: 1000;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+
+      /* Hover effect */
+      .telegram-float-btn:hover {
+        background-color: #006bbd;
+        transform: scale(1.1);
+      }
+
+      /* Optional: icon size */
+      .telegram-float-btn i {
+        font-size: 24px;
+      }
+    </style>
+    <!-- page loader begin -->
+    <div
+      class="page-loader w-100 h-100 bg-white d-flex justify-content-center align-items-center position-fixed overflow-hidden"
+    >
+      <div class="spinner-grow spinner-grow-sm text-primary"></div>
+      <div class="spinner-grow spinner-grow-sm text-primary"></div>
+      <div class="spinner-grow spinner-grow-sm text-primary"></div>
+    </div>
+    <!-- page loader end -->
+    <!-- ticker content begin -->
+    <section class="bg-primary">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12"></div>
+        </div>
+      </div>
+    </section>
+    <!-- ticker content end -->
+    <style>
+      @media screen and (min-width: 600px) {
+        .nav-link {
+          color: #fff;
+        }
+        .nav-link:hover {
+          color: #fcb42d;
+        }
+      }
+    </style>
+    <!-- header begin -->
+    <header
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: #000"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="../img/logo.png"
+            alt="logo"
+            style="width: 130px"
+            class="d-inline-block"
+          />
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse d-flex justify-content-between d-none d-xl-block"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link ccx" href="index.html" style="color: #fff"
+                >Home</a
+              >
+              <ul class="dropdown-menu" style="display: none"></ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="market.html">Markets</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="about.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="https://dashboard.carkinvest.com/login"
+                id="dropdownResources"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Trading</a
+              >
+              <ul class="dropdown-menu" style="display: none"></ul>
+            </li>
+            <li>
+              <div class="gtranslate_wrapper" style="font-size: 12px"></div>
+              <script>
+                window.gtranslateSettings = {
+                  default_language: "en",
+                  languages: ["en", "fr", "de", "ru", "it", "es"],
+                  wrapper_selector: ".gtranslate_wrapper",
+                };
+              </script>
+              <script
+                src="../cdn.gtranslate.net/widgets/latest/popup.js"
+                defer
+              ></script>
+            </li>
+          </ul>
+          <div
+            class="optional-link d-flex align-items-center ms-4 d-none d-xl-block"
+          >
+            <a
+              href="https://dashboard.carkinvest.com/login"
+              class="btn btn-link link-secondary text-decoration-none"
+              >Sign in</a
+            >
+            <a
+              href="https://dashboard.carkinvest.com/register"
+              class="btn btn-outline-primary rounded-pill"
+              style="background-color: #fcb42d; color: #000"
+              >Get started<i class="fas fa-arrow-right fa-sm ms-1"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- sidebar menu -->
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+      <div class="sidebar-header">
+        <img src="../img/logo.png" alt="CarkInvest" class="sidebar-logo" />
+        <button class="sidebar-close" id="sidebarClose">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- User Profile Section -->
+      <div class="sidebar-user-profile">
+        <div class="sidebar-user-avatar">
+          <i class="fas fa-user"></i>
+        </div>
+        <h6 class="sidebar-user-name">Welcome</h6>
+        <p class="sidebar-user-status">Premium Member</p>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="sidebar-menu">
+        <!-- <div class="sidebar-menu-item">
+                <a href="index.html" class="sidebar-menu-link">
+                    <span><i class="fas fa-home"></i> Investment Strategies</span>
+                </a>
+            </div> -->
+
+        <div class="sidebar-menu-item">
+          <a
+            href="#"
+            class="sidebar-menu-link dropdown-toggle"
+            data-dropdown="trading"
+          >
+            <span><i class="fas fa-chart-line"></i> Investment Strategies</span>
+            <i class="fas fa-chevron-down dropdown-arrow"></i>
+          </a>
+          <div class="sidebar-submenu" id="trading-submenu">
+            <a href="./nextgen.html" class="sidebar-submenu-item">
+              <i class="fas fa-rocket"></i> Next Generation Internet
+            </a>
+            <a href="./fintech.html" class="sidebar-submenu-item">
+              <i class="fas fa-layer-group"></i>Fintech Innovation
+            </a>
+            <a href="./metaverse.html" class="sidebar-submenu-item">
+              <i class="fas fa-water"></i> Metaverse
+            </a>
+            <a href="./cark-venture.html" class="sidebar-submenu-item">
+              <i class="fas fa-water"></i> Cark Venture
+            </a>
+            <a href="./cryptoasset.html" class="sidebar-submenu-item">
+              <i class="fas fa-water"></i> Crypto Assets
+            </a>
+            <a href="./cark-exploration.html" class="sidebar-submenu-item">
+              <i class="fas fa-water"></i> Cark Space Exploration
+            </a>
+            <a
+              href="./sustainable-future-food.html"
+              class="sidebar-submenu-item"
+            >
+              <i class="fas fa-water"></i> Cark Sustainable Future Food
+            </a>
+          </div>
+        </div>
+
+        <!-- <div class="sidebar-menu-item">
+                <a href="market.html" class="sidebar-menu-link">
+                    <span><i class="fas fa-chart-bar"></i> Markets</span>
+                </a>
+            </div> -->
+
+        <div class="sidebar-menu-item">
+          <a
+            href="#"
+            class="sidebar-menu-link dropdown-toggle"
+            data-dropdown="wallet"
+          >
+            <span><i class="fas fa-wallet"></i> Why Innovation</span>
+            <i class="fas fa-chevron-down dropdown-arrow"></i>
+          </a>
+          <div class="sidebar-submenu" id="wallet-submenu">
+            <a
+              href="../whyinnovation/cark-difference.html"
+              class="sidebar-submenu-item"
+            >
+              <i class="fas fa-eye"></i> Cark Difference
+            </a>
+            <!-- <a href="https://dashboard.carkinvest.com/login" class="sidebar-submenu-item">
+                        <i class="fas fa-plus"></i> Deposit Funds
+                    </a>
+                    <a href="https://dashboard.carkinvest.com/login" class="sidebar-submenu-item">
+                        <i class="fas fa-minus"></i> Withdraw
+                    </a>
+                    <a href="https://dashboard.carkinvest.com/login" class="sidebar-submenu-item">
+                        <i class="fas fa-history"></i> Transaction History
+                    </a> -->
+          </div>
+        </div>
+
+        <!-- <div class="sidebar-menu-item">
+                <a href="#" class="sidebar-menu-link dropdown-toggle" data-dropdown="account">
+                    <span><i class="fas fa-user-cog"></i> About Cark Invest</span>
+                    <i class="fas fa-chevron-down dropdown-arrow"></i>
+                </a>
+                <div class="sidebar-submenu" id="account-submenu">
+                    <a href="https://dashboard.carkinvest.com/login" class="sidebar-submenu-item">
+                        <i class="fas fa-id-card"></i> Profile Settings
+                    </a>
+                    <a href="https://dashboard.carkinvest.com/login" class="sidebar-submenu-item">
+                        <i class="fas fa-shield-alt"></i> Security
+                    </a>
+                    <a href="https://dashboard.carkinvest.com/login" class="sidebar-submenu-item">
+                        <i class="fas fa-bell"></i> Notifications
+                    </a>
+                    <a href="https://dashboard.carkinvest.com/login" class="sidebar-submenu-item">
+                        <i class="fas fa-question-circle"></i> Help & Support
+                    </a>
+                </div>
+            </div> -->
+
+        <div class="sidebar-menu-item">
+          <a href="index.html" class="sidebar-menu-link">
+            <span><i class="fas fa-home"></i> About Cark invest</span>
+          </a>
+        </div>
+
+        <!-- <div class="sidebar-menu-item">
+                <a href="about.html" class="sidebar-menu-link">
+                    <span><i class="fas fa-info-circle"></i> About Us</span>
+                </a>
+            </div>
+            
+            <div class="sidebar-menu-item">
+                <a href="faq.html" class="sidebar-menu-link">
+                    <span><i class="fas fa-question"></i> FAQ</span>
+                </a>
+            </div>
+            
+            <div class="sidebar-menu-item">
+                <a href="#" class="sidebar-menu-link dropdown-toggle" data-dropdown="more">
+                    <span><i class="fas fa-ellipsis-h"></i> More</span>
+                    <i class="fas fa-chevron-down dropdown-arrow"></i>
+                </a>
+                <div class="sidebar-submenu" id="more-submenu">
+                    <a href="#" class="sidebar-submenu-item">
+                        <i class="fas fa-newspaper"></i> News & Updates
+                    </a>
+                    <a href="#" class="sidebar-submenu-item">
+                        <i class="fas fa-graduation-cap"></i> Learning Center
+                    </a>
+                    <a href="#" class="sidebar-submenu-item">
+                        <i class="fas fa-users"></i> Community
+                    </a>
+                    <a href="#" class="sidebar-submenu-item">
+                        <i class="fas fa-file-contract"></i> Terms & Conditions
+                    </a>
+                </div>
+            </div> -->
+      </nav>
+
+      <!-- Sidebar Footer -->
+      <div style="padding: 20px; border-top: 1px solid #333; margin-top: auto">
+        <div style="display: flex; gap: 10px">
+          <a
+            href="https://dashboard.carkinvest.com/login"
+            style="
+              flex: 1;
+              padding: 10px;
+              background: #333;
+              color: #fff;
+              text-align: center;
+              border-radius: 5px;
+              text-decoration: none;
+              font-size: 14px;
+            "
+          >
+            Sign In
+          </a>
+          <a
+            href="https://dashboard.carkinvest.com/register"
+            style="
+              flex: 1;
+              padding: 10px;
+              background: #fcb42d;
+              color: #000;
+              text-align: center;
+              border-radius: 5px;
+              text-decoration: none;
+              font-size: 14px;
+              font-weight: 600;
+            "
+          >
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- header end -->
+    <main>
+      <section class="hero">
+        <div class="container-venture">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1>Cryptoasset</h1>
+              <p>
+                CARK believes public blockchains are powering novel forms of
+                coordination across finance and the internet. The Investment
+                Manager believes that cryptocurrency value and market share
+                dynamics will be “power law distributed,” meaning that a few
+                cryptocurrencies will capture the majority of value.
+              </p>
+              <a href="#strategy" class="cta-button">Explore strategy</a>
+            </div>
+            <div class="hero-visual">
+              <div class="tech-circle"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- category -->
+
+      <section class="categories-section" style="margin-top: 30px">
+        <div class="container" style="display: flex; flex-direction: column">
+          <h2>Investment Focus</h2>
+          <div class="categories-grid">
+            <!-- <div class="category-item">
+              <div class="category-icon">🧠</div>
+              <div class="category-title">Reusable Rockets</div>
+            </div> -->
+            <!-- <div class="category-item">
+              <div class="category-icon">☁️</div>
+              <div class="category-title">Orbital Aerospace</div>
+            </div> -->
+            <!-- <div class="category-item">
+              <div class="category-icon">🎮</div>
+              <div class="category-title">Suborbital Aerospace</div>
+            </div> -->
+            <!-- <div class="category-item">
+              <div class="category-icon">🌐</div>
+              <div class="category-title">Aerial Drones</div>
+            </div> -->
+            <div class="category-item">
+              <div class="category-icon">💳</div>
+              <div class="category-title">Cryptocurrencies</div>
+            </div>
+            <!-- <div class="category-item">
+              <div class="category-icon">🚗</div>
+              <div class="category-title">Enabling Technology</div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- overview section -->
+
+      <section class="overview-section">
+        <div class="overview-content">
+          <div class="overview-left">
+            <h2>Overview</h2>
+            <div class="overview-details">
+              <div class="detail-row">
+                <span class="detail-label">Type:</span>
+                <span class="detail-value highlight">Active SMA</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Portfolio Manager:</span>
+                <span class="detail-value">CARK Investment Management LLC</span>
+              </div>
+              <!-- <div class="detail-row">
+                <span class="detail-label">Analyst:</span>
+                <span class="detail-value">Sept. 2014</span>
+              </div> -->
+              <!-- <div class="detail-row">
+                <span class="detail-label">Portfolio Manager:</span>
+                <span class="detail-value highlight"
+                  >CARK Investment Management LLC</span
+                >
+              </div> -->
+              <div class="detail-row">
+                <span class="detail-label">Analysts:</span>
+                <div class="detail-value">
+                  <div class="analysts-list">
+                    <span class="analyst-name">Yassine Elmandjra </span>
+                    <span class="analyst-name">Frank Downing</span>
+                    <span class="analyst-name"> David Puell</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="overview-right">
+            <h2>Strategy Description</h2>
+            <div class="description-text">
+              In addition to providing the foundation for digital money, public
+              blockchains are powering novel forms of coordination across
+              finance and the internet. By decentralizing institutions with
+              open-source software, public blockchains minimize the need to
+              trust centralized authorities. In finance, cryptoassets issued on
+              public blockchains are facilitating the coordination of financial
+              services and contracts outside the purview of traditional
+              financial institutions. On the internet, cryptoassets issued on
+              public blockchains are facilitating the coordination of identity,
+              reputation, and data outside the purview of traditional media
+              conglomerates and big tech. These forms of coordination are likely
+              to impact all asset classes. Just as the internet turned
+              information into packets online, we believe public blockchains are
+              likely to turn all assets into transactions on-chain.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- availability -->
+
+      <section class="availability-section">
+        <h2 class="availability-title">Availability</h2>
+
+        <div class="availability-table">
+          <div class="table-header">
+            <div class="table-header-cell">Strategy</div>
+            <div class="table-header-cell">ETF</div>
+            <div class="table-header-cell">Managed Account</div>
+          </div>
+
+          <div class="table-row">
+            <div class="table-cell" data-label="Strategy">Cryptoasset</div>
+            <div class="table-cell" data-label="ETF">
+              <span class="check-mark">✓</span>
+            </div>
+            <div class="table-cell" data-label="Managed Account">
+              <span class="check-mark">✓</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <a href="#" class="btn btn-secondary">
+            Request Information
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="#" class="btn btn-primary">
+            Explore ETF
+            <span class="btn-arrow">→</span>
+          </a>
+        </div>
+
+        <div class="disclaimer">
+          The content presented does not constitute investment advice, should
+          not be used as the basis for any investment decision, and does not
+          purport to provide any legal, tax or accounting advice. Certain of the
+          statements contained on this website may be statements of future
+          expectations and other forward-looking statements that are based on
+          CARK's current views and assumptions, and involve known and unknown
+          risks and uncertainties that could cause actual results, performance
+          or events to differ materially from those expressed or implied in such
+          statements. Past performance is not a reliable indicator of future
+          performance. Investing in the markets, and your investments may be
+          worth more or less than your initial investment upon redemption. There
+          is no guarantee that CARK's objectives will be achieved. Further,
+          there is no assurance that any strategies, methods, sectors, or any
+          investment programs herein were or will prove to be profitable, or
+          that any investment recommendations or decisions we make in the future
+          will be profitable for any investor or client. Professional money
+          management is not suitable for all investors. For full disclosures,
+          please go to our Terms & Conditions page.
+        </div>
+      </section>
+
+      <!-- strategy banner -->
+
+      <section class="strategy-section">
+        <h2>Strategy Characteristics</h2>
+        <div class="strategy-grid">
+          <div class="strategy-item">
+            <span class="number">01</span>
+            <p>
+              <span class="highlight">Actively managed,</span> high conviction
+              portfolio
+            </p>
+          </div>
+          <div class="strategy-item">
+            <span class="number">02</span>
+            <p>
+              <span class="highlight">Cross sector,</span> geographies, and
+              market capitalizations
+            </p>
+          </div>
+          <div class="strategy-item">
+            <span class="number">03</span>
+            <p>
+              <span class="highlight">Benchmark agnostic</span> with low overlap
+              to broad market indicies
+            </p>
+          </div>
+          <div class="strategy-item">
+            <span class="number">04</span>
+            <p>
+              <span class="highlight">Research process</span> driven by CARK’s
+              Open Research Ecosystem
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="team-section">
+        <h2>Investment Team</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="../img/team2.png" alt="Cathie Wood" />
+            <div class="member-info">
+              <h3>Cathie Wood</h3>
+              <p>Chief Executive Officer,<br />Chief Investment Officer</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="../img/team1.png" alt="Frank Downing" />
+            <div class="member-info">
+              <h3>Frank Downing</h3>
+              <p>Director of Research,<br />Next Generation Internet</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="../img/am3.png" alt="Nicholas Grous" />
+            <div class="member-info">
+              <h3>Nicholas Grous</h3>
+              <p>Associate Portfolio Manager</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="../img/team4.png" alt="Jozef Soja" />
+            <div class="member-info">
+              <h3>Jozef Soja</h3>
+              <p>Research Analyst, Next Generation Internet</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="btn btn-primary" style="margin-top: 16px">
+          View all team memberss
+          <span class="btn-arrow">→</span>
+        </a>
+      </section>
+
+      <!-- related research -->
+
+      <section class="research-section">
+        <h2 style="text-align: center">Related Research</h2>
+        <div class="research-grid">
+          <div class="research-card">
+            <img src="../img/research3.jpg" alt="AI and Agriculture" />
+            <div class="research-content">
+              <span class="category">Analyst Research</span>
+              <h4>
+                Will the Convergence Between Artificial Intelligence and
+                Precision Agriculture...
+              </h4>
+              <p>
+                <strong>Tags:</strong>
+                <span class="tags">Artificial Intelligence</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="research-card">
+            <img src="../img/research2.jpg" alt="Autonomous Taxis" />
+            <div class="research-content">
+              <span class="category">Analyst Research</span>
+              <h4>
+                Autonomous Taxis May Have The Most Impact On GDP Of Any
+                Innovation In History
+              </h4>
+              <p>
+                <strong>Tags:</strong>
+                <span class="tags">Autonomous Vehicles, Economics</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="research-card">
+            <img src="../img/research1.jpg" alt="Generative AI and Gaming" />
+            <div class="research-content">
+              <span class="category">Analyst Research</span>
+              <h4>
+                Every Gamer Can Be A Developer: The Impact Of Generative AI On
+                User-...
+              </h4>
+              <p>
+                <strong>Tags:</strong>
+                <span class="tags">Artificial Intelligence</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      src="//code.tidio.co/w3tamtswwriipnucuv1lpqz2y8eedqun.js"
+      async
+    ></script>
+
+    <!-- footer begin -->
+    <footer class="pb-4 in-avo-footer" style="background-color: #000">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gy-4 gy-lg-0">
+          <div class="col">
+            <h5 style="color: #fcb42d">Overview</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://dashboard.carkinvest.com/login"
+                  >DiFi Staking</a
+                >
+              </li>
+              <li>
+                <a href="https://dashboard.carkinvest.com/login"
+                  >Futures Trading</a
+                >
+              </li>
+              <li>
+                <a href="https://dashboard.carkinvest.com/login"
+                  >Spot Trading</a
+                >
+              </li>
+              <li>
+                <a href="https://dashboard.carkinvest.com/login"
+                  >Liqudity Farming</a
+                >
+              </li>
+              <li>
+                <a href="https://dashboard.carkinvest.com/login"
+                  >strategy Trading</a
+                >
+              </li>
+              <li>
+                <a href="https://dashboard.carkinvest.com/login"
+                  >Mock Trading</a
+                >
+              </li>
+              <li>
+                <a href="https://dashboard.carkinvest.com/login">Wallet</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5 style="color: #fcb42d">Account</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Insignt</a></li>
+              <li><a href="#">Whitepaper</a></li>
+              <li><a href="#">Corporate account</a></li>
+              <li><a href="#">Support center</a></li>
+              <li><a href="#">Refer a friend</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5 style="color: #fcb42d">Others</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Trade inspirations</a></li>
+              <li><a href="#">Outrageous predictions</a></li>
+              <li><a href="#">Quarterly outlook</a></li>
+              <li><a href="#">Margin information</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <img src="../img/logo.png" style="width: 140px" />
+            <hr style="margin: 7px; color: #000" />
+            <p>Head Office: 7 Grigol Robakidze Ave, Tbilisi, Georgia.</p>
+            <a class="footer-email" href="mailto:support@carkinvest.com"
+              >support@carkinvest.com</a
+            >
+            <!-- social media begin -->
+            <div class="social-media-list small hstack">
+              <div>
+                <a
+                  href="https://www.facebook.com/indonez"
+                  class="color-facebook text-decoration-none"
+                  ><i class="fab fa-facebook-square"></i> Facebook</a
+                >
+              </div>
+              <div>
+                <a
+                  href="https://twitter.com/indonez_tw"
+                  class="color-twitter text-decoration-none"
+                  ><i class="fab fa-twitter"></i> Twitter</a
+                >
+              </div>
+              <div>
+                <a
+                  href="https://www.instagram.com/indonez_ig/"
+                  class="color-instagram text-decoration-none"
+                  ><i class="fab fa-instagram"></i> Instagram</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-12 text-center small mt-4">
+            <div class="trade-warning">
+              <h6 class="mb-1">
+                <span
+                  ><i class="fas fa-triangle-exclamation fa-sm"></i>Risk
+                  warning</span
+                >
+              </h6>
+              <p class="mb-0">
+                Cark Investment Management LLC (“Cark” ® ”Cark Invest”). All
+                content is original and has been researched and produced by CARK
+                unless otherwise stated. No part of CARK’s original content may
+                be reproduced in any form, or referred to in any other
+                publication, without the express written permission of CARK. The
+                content is for informational and educational purposes only and
+                should not be construed as investment advice or an offer or
+                solicitation in respect to any products or services for any
+                persons who are prohibited from receiving such information under
+                the laws applicable to their place of citizenship, domicile or
+                residence. Certain of the statements contained on this website
+                may be statements of future expectations and other
+                forward-looking statements that are based on CARK's current
+                views and assumptions, and involve known and unknown risks and
+                uncertainties that could cause actual results, performance or
+                events to differ materially from those expressed or implied in
+                such statements. All content is subject to change without
+                notice. All statements made regarding companies or securities or
+                other financial information on this site or any sites relating
+                to CARK are strictly beliefs and points of view held by CARK or
+                the third party making such statement and are not endorsements
+                by CARK of any company or security or recommendations by CARK to
+                buy, sell or hold any security. The content presented does not
+                constitute investment advice, should not be used as the basis
+                for any investment decision, and does not purport to provide any
+                legal, tax or accounting advice. Please remember that there are
+                inherent risks involved with investing in the markets, and your
+                investments may be worth more or less than your initial
+                investment upon redemption. There is no guarantee that ARK's
+                objectives will be achieved. Further, there is no assurance that
+                any strategies, methods, sectors, or any investment programs
+                herein were or will prove to be profitable, or that any
+                investment recommendations or decisions we make in the future
+                will be profitable for any investor or client. Professional
+                money management is not suitable for all investors. For full
+                disclosures, please go to our Terms & Conditions page. The
+                Adviser did not pay a fee to be considered for or granted the
+                awards. The Adviser did not pay any fee to the grantor of the
+                awards for the right to promote the Adviser's receipt of the
+                awards nor was the Adviser required to be a member of an
+                organization to be eligible for the awards. For full Award
+                Disclosure please go to our Terms & Conditions page. Past
+                performance is not indicative of future performance.
+              </p>
+            </div>
+            <p class="copyright-text">
+              Copyright ©2025 CarkInvest Ltd. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+    <!-- to top begin -->
+    <div class="d-none d-md-block">
+      <a
+        href="#"
+        class="to-top fas fa-arrow-up text-decoration-none text-white"
+      ></a>
+    </div>
+    <!-- to top end -->
+    <!-- javascript -->
+    <script src="../js/vendors/bootstrap.bundle.min.js"></script>
+    <script src="../js/vendors/vanilla-marquee.min.js"></script>
+    <script src="../js/vendors/tradingview-widget.min.js"></script>
+    <script src="../js/vendors/bigger-picture.min.js"></script>
+    <script src="../js/utilities.min.js"></script>
+    <script src="../js/config-theme.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
