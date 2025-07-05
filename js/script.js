@@ -435,3 +435,89 @@ class ARKSlider {
 document.addEventListener("DOMContentLoaded", () => {
   new ARKSlider();
 });
+
+// for faq
+
+document.addEventListener("DOMContentLoaded", function () {
+  const faqsQuestions = document.querySelectorAll(".faqs-question");
+
+  faqsQuestions.forEach((question) => {
+    const header = question.querySelector(".faqs-question-header");
+    const content = question.querySelector(".faqs-question-content");
+    const icon = question.querySelector(".faqs-question-icon");
+
+    header.addEventListener("click", function () {
+      const isActive = question.classList.contains("active");
+
+      // Close all other questions
+      faqsQuestions.forEach((q) => {
+        if (q !== question) {
+          const otherContent = q.querySelector(".faqs-question-content");
+          const otherIcon = q.querySelector(".faqs-question-icon");
+
+          // Set current height first, then animate to 0
+          if (q.classList.contains("active")) {
+            otherContent.style.maxHeight = otherContent.scrollHeight + "px";
+            // Force reflow
+            otherContent.offsetHeight;
+            otherContent.style.maxHeight = "0";
+          }
+
+          q.classList.remove("active");
+          otherIcon.textContent = "+";
+        }
+      });
+
+      // Toggle current question
+      if (isActive) {
+        // Closing - set specific height first, then animate to 0
+        content.style.maxHeight = content.scrollHeight + "px";
+
+        // Force reflow
+        content.offsetHeight;
+
+        // Now animate to closed
+        content.style.maxHeight = "0";
+        question.classList.remove("active");
+        icon.textContent = "+";
+      } else {
+        // Opening
+        question.classList.add("active");
+        icon.textContent = "×";
+
+        // Set the height to the scroll height for smooth animation
+        content.style.maxHeight = content.scrollHeight + "px";
+
+        // Reset to auto after animation completes for responsive behavior
+        setTimeout(() => {
+          if (question.classList.contains("active")) {
+            content.style.maxHeight = "none";
+          }
+        }, 400);
+      }
+    });
+  });
+
+  // Smooth scrolling for better UX
+  const sections = document.querySelectorAll(".faqs-section");
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach((section) => {
+    section.style.opacity = "0";
+    section.style.transform = "translateY(20px)";
+    section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+    observer.observe(section);
+  });
+});
