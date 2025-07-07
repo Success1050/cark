@@ -1239,7 +1239,37 @@ Best place to buy stocks for beginners"
     </div>
     <!-- to top end -->
     <!-- javascript -->
-    <script src="js/faq.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqsQuestions = document.querySelectorAll(".faqs-question");
+
+        faqsQuestions.forEach((question) => {
+          const header = question.querySelector(".faqs-question-header");
+          const icon = question.querySelector(".faqs-question-icon");
+
+          header.addEventListener("click", function () {
+            const isActive = question.classList.contains("active");
+
+            // Close all other questions (simplified)
+            faqsQuestions.forEach((q) => {
+              if (q !== question) {
+                q.classList.remove("active");
+                q.querySelector(".faqs-question-icon").textContent = "+";
+              }
+            });
+
+            // Toggle current question (simplified)
+            if (isActive) {
+              question.classList.remove("active");
+              icon.textContent = "+";
+            } else {
+              question.classList.add("active");
+              icon.textContent = "×";
+            }
+          });
+        });
+      });
+    </script>
     <script src="js/vendors/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/vendors/vanilla-marquee.min.js"></script>
