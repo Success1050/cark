@@ -29,6 +29,12 @@ Best place to buy stocks for beginners"
     />
     <meta name="author" content="CarkInvest" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <meta name="theme-color" content="#FCB42D" />
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
     <title>Cark Invest | We Believe Innovation Is Key to Growth</title>
@@ -126,7 +132,7 @@ Best place to buy stocks for beginners"
         border-radius: 10px;
         margin-bottom: 15px;
         overflow: hidden;
-        transition: all 0.2s ease; /* Faster hover transition */
+        transition: all 0.2s ease;
       }
 
       .faqs-question:hover {
@@ -166,7 +172,7 @@ Best place to buy stocks for beginners"
         align-items: center;
         justify-content: center;
         font-size: 1.2rem;
-        transition: all 0.15s ease; /* Faster icon rotation */
+        transition: all 0.15s ease;
         flex-shrink: 0;
       }
 
@@ -175,15 +181,17 @@ Best place to buy stocks for beginners"
         transform: rotate(45deg);
       }
 
-      /* FASTER DROPDOWN ANIMATION */
+      /* OPTIMIZED DROPDOWN ANIMATION */
       .faqs-question-content {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.2s ease-out; /* Reduced from 0.4s to 0.2s */
+        transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        opacity: 0;
       }
 
       .faqs-question.active .faqs-question-content {
-        max-height: 500px; /* Fixed height instead of calculated */
+        max-height: 1000px;
+        opacity: 1;
       }
 
       .faqs-question-answer {
@@ -191,14 +199,12 @@ Best place to buy stocks for beginners"
         color: #555;
         line-height: 1.7;
         font-size: 1rem;
-        transform: translateY(-10px);
-        opacity: 0;
-        transition: all 0.15s ease 0.05s; /* Faster with slight delay */
+        transform: translateY(0);
+        transition: transform 0.2s ease 0.1s;
       }
 
-      .faqs-question.active .faqs-question-answer {
-        transform: translateY(0);
-        opacity: 1;
+      .faqs-question:not(.active) .faqs-question-answer {
+        transform: translateY(-10px);
       }
 
       .faqs-number {
@@ -219,7 +225,7 @@ Best place to buy stocks for beginners"
       /* Responsive Design */
       @media (max-width: 768px) {
         .faqs-header {
-          display: none;
+          padding: 30px 20px;
         }
 
         .faqs-header h1 {
@@ -290,6 +296,12 @@ Best place to buy stocks for beginners"
           height: 25px;
           font-size: 1rem;
         }
+      }
+
+      /* Loading indicator - helps with perceived performance */
+      .faqs-container.loading {
+        opacity: 0.7;
+        pointer-events: none;
       }
     </style>
   </head>
@@ -1239,43 +1251,75 @@ Best place to buy stocks for beginners"
     </div>
     <!-- to top end -->
     <!-- javascript -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const faqsQuestions = document.querySelectorAll(".faqs-question");
 
-        faqsQuestions.forEach((question) => {
-          const header = question.querySelector(".faqs-question-header");
-          const icon = question.querySelector(".faqs-question-icon");
-
-          header.addEventListener("click", function () {
-            const isActive = question.classList.contains("active");
-
-            // Close all other questions (simplified)
-            faqsQuestions.forEach((q) => {
-              if (q !== question) {
-                q.classList.remove("active");
-                q.querySelector(".faqs-question-icon").textContent = "+";
-              }
-            });
-
-            // Toggle current question (simplified)
-            if (isActive) {
-              question.classList.remove("active");
-              icon.textContent = "+";
-            } else {
-              question.classList.add("active");
-              icon.textContent = "×";
-            }
-          });
-        });
-      });
-    </script>
     <script src="js/vendors/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/vendors/vanilla-marquee.min.js"></script>
-    <script src="js/vendors/tradingview-widget.min.js"></script>
-    <script src="js/vendors/bigger-picture.min.js"></script>
     <script src="js/utilities.min.js"></script>
     <script src="js/config-theme.js"></script>
+    <script>
+      // ROBUST FAQ SCRIPT FOR GITHUB PAGES
+      (function () {
+        "use strict";
+
+        let initAttempts = 0;
+        const maxAttempts = 10;
+
+        function initializeFAQ() {
+          initAttempts++;
+
+          const faqsQuestions = document.querySelectorAll(".faqs-question");
+
+          if (faqsQuestions.length === 0) {
+            if (initAttempts < maxAttempts) {
+              setTimeout(initializeFAQ, 100);
+              return;
+            }
+            return;
+          }
+
+          faqsQuestions.forEach((question) => {
+            const header = question.querySelector(".faqs-question-header");
+            const icon = question.querySelector(".faqs-question-icon");
+
+            if (!header || !icon) return;
+
+            header.addEventListener("click", function (e) {
+              e.preventDefault();
+              e.stopPropagation();
+
+              const isActive = question.classList.contains("active");
+
+              // Close all other questions
+              faqsQuestions.forEach((q) => {
+                if (q !== question) {
+                  q.classList.remove("active");
+                  const qIcon = q.querySelector(".faqs-question-icon");
+                  if (qIcon) qIcon.textContent = "+";
+                }
+              });
+
+              // Toggle current question
+              if (isActive) {
+                question.classList.remove("active");
+                icon.textContent = "+";
+              } else {
+                question.classList.add("active");
+                icon.textContent = "×";
+              }
+            });
+          });
+        }
+
+        // Multiple initialization attempts
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", initializeFAQ);
+        } else {
+          initializeFAQ();
+        }
+
+        window.addEventListener("load", initializeFAQ);
+        setTimeout(initializeFAQ, 500);
+      })();
+    </script>
   </body>
 </html>
